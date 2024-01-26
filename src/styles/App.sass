@@ -1,0 +1,154 @@
+@import '_variables'
+
+* 
+    margin:0
+    padding:0
+    box-sizing: border-box
+
+.app
+    color: $accentColor
+
+a
+    text-decoration: none
+    color: $accentColor
+    &:visited
+        color: $accentColor
+
+nav 
+    a
+        color: $darkGreyColor
+    a.active
+        pointer-events: none
+        font-weight: 700
+        color: $accentColor
+
+.mainContent
+    padding-left: $OffsetMargin
+    padding-right: $OffsetMargin
+
+.fullWidth
+    margin-left: -$OffsetMargin
+    margin-right: -$OffsetMargin
+//Font Styling
+h1
+    position: relative
+    font-size: 3.052rem
+    &::after
+        content:''
+        position: absolute
+        left: 0
+        bottom: -15px
+        display: inline-block
+        height: 7px
+        width: 60px
+        background-color: $accentColor
+        
+
+h2
+    position: relative
+    font-size: 2.441rem
+    margin-bottom: 40px
+    &::after
+        content:''
+        position: absolute
+        left: 0
+        bottom: -15px
+        display: inline-block
+        height: 7px
+        width: 60px
+        background-color: $accentColor
+
+h3
+    font-size: 1.563rem
+
+h4 
+    font-size: 0.8rem
+
+p 
+    font-size: 1rem
+    color: $darkGreyColor
+
+h3, h4, p 
+    margin-bottom: 8px
+    line-height: 1.5
+
+@media screen and (max-width: 700px) 
+    h1
+        font-size: 2.441rem
+    h2
+        font-size: 1.953rem
+
+
+    
+
+//Card Styling
+.featureCard
+    width: 33.3%
+    border: 5px solid $CardBorderColor
+    padding: 25px
+    background-color: $whiteColor
+    transition: all .32s ease-out
+    &:hover
+        transform: translate(20px, -20px)
+        border-width: 1px
+        box-shadow: -20px 20px 0px 0px $HoverBackgroundColor
+    .icon 
+        margin-bottom: 15px
+    .heading
+        display: flex
+        align-items: center
+        gap: 10px
+
+// Button Styling
+.borderlessBtn
+    cursor: pointer
+    position: relative
+    transition: all .32s ease-out
+    color: $darkGreyColor
+    &::after
+        content: ''
+        transition: all .32s ease-out
+        position: absolute
+        bottom: -6px
+        left: 0px
+        display: inline-block
+        height: 3px
+        width: 0px
+        background-color: $HoverBackgroundColor
+    &:hover
+        font-weight: 700
+        color: $HoverBackgroundColor
+    &:hover::after
+        content: ''
+        width: 24px
+
+
+.secondaryBtn 
+    cursor: pointer
+    transition: all .32s ease-out
+    border: 3.5px solid $accentColor
+    background-color: $whiteColor
+    padding: 11px 22px
+    font-weight: 700
+    letter-spacing: .3px
+    width: fit-content
+    margin-top: 25px
+    &:hover
+        transform: translate(12px, -12px)
+        border-width: 1px
+        box-shadow: -12px 12px 0px 0px $HoverBackgroundColor
+
+.primaryBtn
+    cursor: pointer
+    transition: all .32s ease-out
+    color: $whiteColor
+    background-color: $accentColor
+    padding: 11px 22px
+    font-weight: 700
+    width: fit-content
+    margin-top: 25px
+    letter-spacing: .3px
+    &:hover
+        transform: translate(12px, -12px)
+        border-width: 1px
+        box-shadow: -12px 12px 0px 0px $HoverBackgroundColor

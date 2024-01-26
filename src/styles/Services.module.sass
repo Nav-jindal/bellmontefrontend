@@ -1,0 +1,73 @@
+@import '_variables'
+
+.tabsHeading
+    .active
+        font-weight: 700
+        color: $accentColor
+        pointer-events: none
+    display: flex
+    gap: 30px
+    margin-top: 70px
+    font-size: 1rem
+
+.imageWrapper
+    min-width: 100%
+    margin-top: 20px
+    height: 460px
+    img
+        width: 100%
+        height: 100%
+        object-fit: cover
+
+.tabContentWrapper
+    max-width: 1250px
+    margin-top: 50px
+    //display: flex
+    //flex-wrap: wrap-reverse
+    //align-items: flex-start
+    grid-gap: 20px
+    .button
+        margin-top: 20px !important
+    div
+        //flex: 1 1 48%
+    p
+        margin-top: 25px
+        margin-bottom: 25px
+
+
+table, td, th
+    border: 1px solid #E1CFFF
+    border-collapse: collapse
+    margin: 0px
+    text-align: left
+    padding: 8px 12px
+
+table 
+    margin-top: 25px
+    margin-bottom: 35px
+    th
+        background: #ebebeb
+        font-weight: 600
+        padding: 18px 12px
+    .noPadding
+        padding: 0px
+    div 
+        white-space: nowrap
+        padding: 8px 12px
+    .borderBottomOnly
+        border-bottom: 1px solid #E1CFFF
+
+.reeferVehicleTable
+    margin-top: 50px
+
+@media screen and (max-width: 700px)
+    .tabsHeading
+        flex-direction: column
+    .tabContentWrapper
+        grid-auto-flow: row
+        div, p
+            grid-column: span 2
+        p
+            &:last-child
+                grid-row: 2 / span 3
+            

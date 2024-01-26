@@ -1,0 +1,70 @@
+@import '_variables'
+    
+.navbar 
+    padding: 30px $OffsetMargin
+    color: $accentColor
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom:  $sectionMargin
+    .logo
+        display: flex
+        gap: 10px
+        align-items: center
+        font-size: 1rem
+        font-weight: 700
+        img
+            width: 40%
+            height: auto
+        div
+            width: 100%
+        span
+            font-weight: 300
+            font-size: .8rem
+    .navLinksWrapper
+        .navLinks
+            display: flex
+            align-items: center
+            gap: 35px
+            a, div
+                color: $accentColor
+                &:visited:hover, &:hover
+                    color: $HoverBackgroundColor
+                &:visited
+                    color: $accentColor 
+
+.hamburgerMenu, .mobileOverlayBg
+    display: none
+@media screen and (max-width: 900px) 
+    .dBlock
+        display: block
+    .dHidden
+        display: none
+    .navbar
+        .navLinksWrapper
+            position: fixed
+            right: 0
+            top: 0
+            bottom: 0
+            z-index: 200
+            width: 250px
+            background: $whiteColor
+            padding: 24px $OffsetMargin
+            transition: all .32s ease-in-out
+            .hamburgerMenu 
+                display: flex
+                justify-content: flex-end
+            .navLinks
+                margin-top: 35px
+                flex-direction: column
+                align-items: flex-end
+    .mobileOverlayBg
+        position: fixed
+        z-index: 150
+        top: 0
+        bottom: 0
+        right: 0
+        left: 0
+    .hamburgerMenu
+        display: block
+        cursor: pointer

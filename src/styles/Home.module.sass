@@ -1,0 +1,133 @@
+@import '_variables'
+
+.heroSection
+    height: calc(100vh - 99px)
+    .heroContent
+        width: 40%
+        h1
+            margin-bottom: 40px
+        p
+            font-size: 1.25rem
+    .backgroundWrapper
+        .truckImage
+            position: absolute
+            top: 150px
+            right: -130px
+            z-index: -40
+            height: 80%
+            width: auto
+            img
+                
+                height: 100%
+                width: auto
+
+        .heroBackground
+            position: absolute
+            left: 0
+            top:0
+            z-index: -100
+            width: 100%
+            height: calc(100vh + 8px)
+            img 
+                height: 100%
+                width: 100%
+                object-fit: cover
+                object-position: bottom
+
+.featuresSection
+    margin-top: $sectionMargin
+    margin-bottom: $sectionMargin
+    .features
+        display: flex
+        flex-wrap: wrap
+        gap: 20px
+        div
+            flex: 1
+
+.aboutSection
+    margin-bottom: $sectionMargin
+    display: flex
+    flex-wrap: wrap
+    gap: 20px
+    align-items: center
+    .aboutImage
+        margin-left: -$OffsetMargin
+        height: 540px
+        flex: 1
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+    .aboutContent
+        flex: 1
+
+.gallery
+    margin-top: $sectionMargin
+    margin-bottom: $sectionMargin
+    cursor: grab
+    div
+        width: 100%
+        height: 460px
+        img
+            height: 100%
+            width: 100%
+            object-fit: cover
+
+
+.clientLogoSection
+    margin-bottom: $sectionMargin
+    background-color: $lightGreyColor
+    .clientLogosWrapper
+        padding: 80px $OffsetMargin
+        display: flex
+        flex-wrap: wrap
+        gap: 35px
+        justify-content: center
+
+
+.requestQuoteSection
+    margin-bottom: $sectionMargin
+    display: flex
+    flex-wrap: wrap
+    gap: 20px
+    width: 100%
+    justify-content: center
+    align-items: center
+    div,h3
+        margin: 0                
+
+@media screen and (max-width: 950px)
+    .heroSection
+        .backgroundWrapper
+            .truckImage
+                right: -210px
+                height: 70%
+
+@media screen and (max-width: 900px) 
+    .heroSection
+        .heroContent
+            width: 100%
+        .backgroundWrapper
+            .truckImage
+                display: none
+
+@media screen and (max-width: 700px)
+    .featuresSection
+        .features
+            div
+                flex: 1 1 100%
+    .aboutSection
+        .aboutImage
+            margin-left: -$OffsetMargin
+            margin-right: -$OffsetMargin
+        & > div
+            flex-basis: 100% !important
+
+    .clientLogoSection
+        .clientLogosWrapper
+            gap: 4px
+
+    .requestQuoteSection
+        text-align: center
+
+
