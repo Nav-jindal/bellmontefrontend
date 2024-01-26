@@ -1,6 +1,6 @@
 // Packages
 import React from "react"
-import { NavLink } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 
 //Styling
 import footerStyles from '../../styles/Footer.module.sass'
@@ -9,6 +9,7 @@ import footerStyles from '../../styles/Footer.module.sass'
 import AppLogo from "../../icons/AppLogo"
 
 const Footer = () => {
+    const navigate = useNavigate()
     // Constants
     const socialMedia = [
         {
@@ -19,7 +20,7 @@ const Footer = () => {
         {
             id: 1,
             title: 'Facebook',
-            url: 'https://www.facebook.com/profile.php?id=61555263315511',
+            url: 'https://www.facebook.com/people/Bellmonte-Industries-Private-Limited/61555243996831/?is_tour_dismissed=true',
         },
         {
             id: 2,
@@ -41,7 +42,7 @@ const Footer = () => {
             title: 'Services'
         },
         {
-            url: '/',
+            url: '',
             title: 'Contact'
         },
         {
@@ -51,25 +52,32 @@ const Footer = () => {
     ]
     const servicesMenu = [
         {
+            id: 0,
             url: '/services',
             title: 'Solution for Truck Chassis'
         },
         {
+            id: 1,
             url: '/services',
             title: 'Solution for Container/ Box'
         },
         {
+            id: 2,
             url: '/services',
-            title: 'Solution for Truck Financing'
+            title: 'Solution for Reefer Unit'
         },
         {
+            id: 3,
             url: '/services',
             title: 'Solution for Truck Subsidy'
         },
         {
+            id: 4,
             url: '/services',
-            title: 'Solution for Reefer Unit'
+            title: 'Solution for Truck Financing'
         },
+        
+       
     ]
 
     return (
@@ -96,9 +104,9 @@ const Footer = () => {
             <div className={footerStyles.col}>
                 <h3>Services</h3>
                 {servicesMenu.map((menuItem, index) => 
-                    <NavLink key={index} to={menuItem.url}>
-                        <div className='borderlessBtn'>{menuItem.title}</div>
-                    </NavLink>
+                    // <NavLink key={index} to={menuItem.url}>
+                        <div className='borderlessBtn' onClick={()=>{navigate(`${menuItem.url}`, {state: {tabToOpen: menuItem.id}})}}>{menuItem.title}</div>
+                    // </NavLink>
                 )}
             </div>
             <div className={footerStyles.col}>

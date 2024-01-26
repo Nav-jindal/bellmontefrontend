@@ -8,8 +8,8 @@
         img
             height: 100%
             width: 100%
-            object-fit: cover
-            object-position: center
+            object-fit: contain
+            object-position: left
 
 .aboutContentWrapper
     max-width: 1250px
@@ -17,16 +17,16 @@
     margin-top: 35px
     text-wrap: balance
     word-wrap: break-word
-    display: grid
-    grid-gap: 20px
-    grid-template-columns: repeat(2, 1fr)
-    grid-template-rows: 120px repeat(auto-fill, max-content)
-    grid-auto-flow: column
-    div,p
-        grid-column: span 1
-    p
-        &:last-child
-            grid-row: 1 / span 3
+    // display: grid
+    // grid-gap: 20px
+    // grid-template-columns: repeat(2, 1fr)
+    // grid-template-rows: 120px repeat(auto-fill, max-content)
+    // grid-auto-flow: column
+    // div,p
+    //     grid-column: span 1
+    // p
+    //     &:last-child
+    //         grid-row: 1 / span 3
 
 @media screen and (max-width: 700px)
     .aboutContentWrapper

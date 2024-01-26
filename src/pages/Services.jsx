@@ -1,6 +1,6 @@
 // Packages
-import React, { useState } from "react"
-import { NavLink } from "react-router-dom"
+import React, { useState, useEffect } from "react"
+import { NavLink, useLocation } from "react-router-dom"
 
 // Styling & Images
 import servicesStyles from '../styles/Services.module.sass'
@@ -10,7 +10,9 @@ import truckFinance from '../images/truck_financing.jpg'
 import truckSubsidy from '../images/truck_subsidy.jpg'
 import reeferUnit from '../images/reefer_unit.jpg'
 
-const Services = () => {
+const Services = (props) => {
+    const location = useLocation()
+    console.log(location)
     // Constant
     const servicesArray = [
         {
@@ -26,11 +28,10 @@ const Services = () => {
             description: "These refrigerated chambers are the heroes of the highway, guarding your valuable cargo against the harsh realities of the road and weather. But choosing the right cooling container is more than just picking a size and a plug. It's about finding the perfect partner for your specific needs, ensuring consistent, reliable temperature control that protects your precious cargo. We partner with industry leaders like Saurakha, Subzero, Zep, ThermoKing, and Carrier to bring you a diverse range of cooling container options. From small, nimble units for urban deliveries to powerful, multi-compartment giants for cross-country hauls, we have the expertise to navigate the intricate world of temperature-controlled transportation",       
         },
         {
-            id: 2,         
-            url: truckFinance,
-            title: 'Solution for Truck Financing',
-            description: "We are working with all Nationalized and Private Banks to fulfill your financial needs. Purchasing of Reefer Vehicles requires funds from various sources and as such promoters/owners may not be able to fund the entire project on their own sources. The entire Project cost is taken into consideration except land and collateral free funding can be arranged upto 89% of the project cost. Primary security would be the Hypothecation of Reefer Vehicles Up to Rs. 50 Lakhs to 10 Crore.",
-            table:''
+            id: 2,
+            url: reeferUnit,
+            title: 'Solution for Reefer Unit',
+            description: "Essentially, reefer units are specialized climate control systems for trucks and trailers. They work tirelessly to maintain a set temperature, ensuring that precious cargo like fresh produce, pharmaceuticals, and even floral arrangements arrive at their destination in pristine condition. Choosing the right reefer unit can be challenging.We understand the unique needs of different industries and applications. That's why we've partnered with leading reefer unit manufacturers, assembling a curated selection of the most reliable and efficient units on the market.",
         },
         {
             id: 3,
@@ -40,17 +41,26 @@ const Services = () => {
             table:''
         },
         {
-            id: 4,
-            url: reeferUnit,
-            title: 'Solution for Reefer Unit',
-            description: "Essentially, reefer units are specialized climate control systems for trucks and trailers. They work tirelessly to maintain a set temperature, ensuring that precious cargo like fresh produce, pharmaceuticals, and even floral arrangements arrive at their destination in pristine condition. Choosing the right reefer unit can be challenging.We understand the unique needs of different industries and applications. That's why we've partnered with leading reefer unit manufacturers, assembling a curated selection of the most reliable and efficient units on the market.",
+            id: 4,         
+            url: truckFinance,
+            title: 'Solution for Truck Financing',
+            description: "We are working with all Nationalized and Private Banks to fulfill your financial needs. Purchasing of Reefer Vehicles requires funds from various sources and as such promoters/owners may not be able to fund the entire project on their own sources. The entire Project cost is taken into consideration except land and collateral free funding can be arranged upto 89% of the project cost. Primary security would be the Hypothecation of Reefer Vehicles Up to Rs. 50 Lakhs to 10 Crore.",
+            table:''
         },
     ]
 
     // States
-    const [currentTab, setCurrentTab] = useState(0)
+    const [currentTab, setCurrentTab] = useState(location?.state?.tabToOpen ?? 0)
 
     // Effect
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    },[]);
+
+    useEffect(()=>{
+        setCurrentTab(location?.state?.tabToOpen ?? 0)
+        window.scrollTo(0, 0);
+    },[location])
     return <div>
         <h2 className={servicesStyles.heading}>Services</h2>
         <div className={servicesStyles.tabsHeading}>
@@ -65,7 +75,7 @@ const Services = () => {
             )}
         </div>
 
-        <div className={`${servicesStyles.imageWrapper} fullWidth`}>
+        <div className={`${servicesStyles.imageWrapper}`}>
                 <img src={servicesArray[currentTab]?.url} alt={servicesArray[currentTab]?.title} />
         </div>        
         <div className={servicesStyles.tabContentWrapper}>

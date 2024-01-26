@@ -1,5 +1,5 @@
 // Packages
-import React from "react"
+import React, { useEffect } from "react"
 import { useForm, Controller } from "react-hook-form"
 
 // Stylings
@@ -22,19 +22,29 @@ const RequestAQuote = () => {
             service: 'Cold Storage Solutions'
         }
     })
-    const servicesOptions = [
+
+    const reeferUnit = [
         '',
-        'Cold Storage Solutions',
-        'Cold Storage Refurbished Vehicle',
-        'Truck Financing',
-        'Truck Subsidy',
+        'Thermo King',
+        'Carrier',
+    ]
+    const vehicleModel = [
+        '',
+        'Tata',
+        'Ashok Layland',
+        'Eicher',
+        'Bharat Benz',
     ]
 
     const containerSize = [
         '',
-        'Large',
-        'Medium',
-        'Small'
+        '20 Foot',
+        '22 Foot',
+        '24 Foot',
+        '26 Foot',
+        '28 Foot',
+        '30 Foot',
+        '32 Foot',
     ]
 
     // Functions
@@ -76,6 +86,10 @@ const RequestAQuote = () => {
         // }
 
     }
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      },[]);
     return <div>
         <h2 className={requestStyles.heading}>Request a quote</h2>
 
@@ -94,7 +108,7 @@ const RequestAQuote = () => {
 
                 <TextInput
                     register={register}
-                    title='Fullname'
+                    title='Name'
                     id='fullName'
                     errors={errors.fullName}
                     registerProps={{
@@ -118,19 +132,23 @@ const RequestAQuote = () => {
 
                 <TextInput
                     register={register}
-                    title='Phone (add country code)'
+                    title='Phone Number'
                     id='phone'
                     errors={errors.phone}
                     registerProps={{
                         required: 'This field is required',
                         pattern: {
-                            value: /^[+]\d+$/,
+                            value: /^[0-9]{10}$/,
                             message: 'Invalid phone number',
                         },
+                        onChange: e => {
+                            handleNumberInputChange(e.target.value, e.target.id)
+                        },
+                        validate: value => !isNaN(parseInt(value)),
                     }}
                     inputProps={{
                         type: 'tel',
-                        maxLength: 13,
+                        maxLength: 10,
                     }}
                 />
             </div>
@@ -148,7 +166,7 @@ const RequestAQuote = () => {
                         render={({ field }) => (
                         <select {...field} title='service' className={requestStyles.selectArrow}>
                             
-                            {servicesOptions?.map((service, index) => <option key={index} value={service}>{service}</option>)}
+                            {vehicleModel?.map((service, index) => <option key={index} value={service}>{service}</option>)}
                         </select>
                         )}
                     />
@@ -157,7 +175,7 @@ const RequestAQuote = () => {
                
 
                 <div className={requestStyles.inputWrapper}>
-                    <label htmlFor='service'>reefer Container Size</label>
+                    <label htmlFor='service'>Reefer Container Size</label>
                     <Controller
                         name='containerSize'
                         control={control}
@@ -184,13 +202,12 @@ const RequestAQuote = () => {
                         render={({ field }) => (
                         <select {...field} title='service' className={requestStyles.selectArrow}>
                             
-                            {servicesOptions?.map((service, index) => <option key={index} value={service}>{service}</option>)}
+                            {reeferUnit?.map((service, index) => <option key={index} value={service}>{service}</option>)}
                         </select>
                         )}
                     />
                     { errors.reeferUnit && <div className={requestStyles.error}>{ errors.reeferUnit.message}</div>}
                 </div>
-               
 
                 <TextInput
                     register={register}
@@ -201,8 +218,8 @@ const RequestAQuote = () => {
                         required: 'This field is required',
                         onChange: e => {
                             handleNumberInputChange(e.target.value, e.target.id)
-                          },
-                          validate: value => !isNaN(parseInt(value)),
+                        },
+                        validate: value => !isNaN(parseInt(value)),
                     }}
                 />
 

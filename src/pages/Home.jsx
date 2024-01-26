@@ -43,7 +43,7 @@ const Home = () => {
             id:0, 
             icon: <PenIcon />,
             title: 'Customized Solutions', 
-            description: 'We will provide you customized solutions to all your refrigerated vehicles need right from purchase to financing and subsidy.'
+            description: 'We will provide you customized solutions to all your Reefer Vehicle need right from purchase to financing and subsidy.'
         },
         { 
             id:1, 
@@ -78,6 +78,10 @@ const Home = () => {
         // animation for truck image sliding from right 750px to the declared origin or original position
         gsap.fromTo(truck.current, {x: 750 }, {x: 0, delay: 2.25, duration: 1.3, ease: 'power0.inOut' })
     },[])
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      },[]);
 
     return <div>
         <div className={homeStyles.heroSection} ref={background}>
@@ -116,8 +120,8 @@ const Home = () => {
                 <img src={aboutImage} alt='about image'/>
             </div>
             <div className={homeStyles.aboutContent}>
-                <p>About Bellmonte</p>
-                <h2>Providing Customized Cooling Solutions</h2>
+                {/* <p>About Bellmonte</p> */}
+                <h2>Providing Customized Solutions for your needs</h2>
                 <p> Our vehicle selection includes various refrigerated trucks and vans which offer the ideal way to 
                 deliver Fruits and Vegetables, Frozen Foods, Medicine, Fish, Meat. Bellmonte Industries Private 
                 Limited's Transportation Solutions is a refrigerated truck manufacturer based on providing superior 
@@ -143,7 +147,7 @@ const Home = () => {
                 slidesToScroll={1}
                 autoplay={true}
                 autoplaySpeed={3000}
-                className={`${homeStyles.gallery} fullWidth`} // classname for inner slider div
+                className={`${homeStyles.gallery}`} // classname for inner slider div
                 pauseOnDotsHover={true}
             >
                 <div>
