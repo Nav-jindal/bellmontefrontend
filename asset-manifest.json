@@ -1,12 +1,11 @@
 {
   "files": {
     "main.css": "/bellmontefrontend/static/css/main.53516bcc.css",
-    "main.js": "/bellmontefrontend/static/js/main.eb27f439.js",
+    "main.js": "/bellmontefrontend/static/js/main.f1a32b7d.js",
     "static/js/787.66a566a6.chunk.js": "/bellmontefrontend/static/js/787.66a566a6.chunk.js",
     "static/media/truck.png": "/bellmontefrontend/static/media/truck.3c853c0f7d33ec8cdbbf.png",
     "static/media/background.png": "/bellmontefrontend/static/media/background.a00eab41895a1cb4b9cc.png",
     "static/media/reefer_container.jpg": "/bellmontefrontend/static/media/reefer_container.53968f2c2ba3b57d232b.jpg",
-    "static/media/about.jpg": "/bellmontefrontend/static/media/about.ac16406b2ae89b4b3b49.jpg",
     "static/media/truck_financing.jpg": "/bellmontefrontend/static/media/truck_financing.2de92805f15206ba2a49.jpg",
     "static/media/truck_subsidy.jpg": "/bellmontefrontend/static/media/truck_subsidy.f48d352738d353222951.jpg",
     "static/media/reefer_unit.jpg": "/bellmontefrontend/static/media/reefer_unit.1e19acc510367f8c315d.jpg",
@@ -15,6 +14,7 @@
     "static/media/gallery-2.jpg": "/bellmontefrontend/static/media/gallery-2.96796dc50e3a2955ae3b.jpg",
     "static/media/gallery-8.jpg": "/bellmontefrontend/static/media/gallery-8.556a303260a74a54a112.jpg",
     "static/media/gallery-7.jpg": "/bellmontefrontend/static/media/gallery-7.f202d32cd200a43169a5.jpg",
+    "static/media/about.jpg": "/bellmontefrontend/static/media/about.eba5cc9cd8a1a9ed13c4.jpg",
     "static/media/gallery-6.jpg": "/bellmontefrontend/static/media/gallery-6.63eab12af186631e65dc.jpg",
     "static/media/gallery-1.jpg": "/bellmontefrontend/static/media/gallery-1.6470c522bbd943b9c364.jpg",
     "static/media/gallery-5.jpg": "/bellmontefrontend/static/media/gallery-5.e787b8792a1e7b7f125f.jpg",
@@ -26,11 +26,11 @@
     "static/media/slick.woff": "/bellmontefrontend/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/bellmontefrontend/index.html",
     "main.53516bcc.css.map": "/bellmontefrontend/static/css/main.53516bcc.css.map",
-    "main.eb27f439.js.map": "/bellmontefrontend/static/js/main.eb27f439.js.map",
+    "main.f1a32b7d.js.map": "/bellmontefrontend/static/js/main.f1a32b7d.js.map",
     "787.66a566a6.chunk.js.map": "/bellmontefrontend/static/js/787.66a566a6.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.53516bcc.css",
-    "static/js/main.eb27f439.js"
+    "static/js/main.f1a32b7d.js"
   ]
 }
