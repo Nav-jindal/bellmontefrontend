@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/bellmontefrontend/static/css/main.53516bcc.css",
-    "main.js": "/bellmontefrontend/static/js/main.f1a32b7d.js",
+    "main.css": "/bellmontefrontend/static/css/main.44337888.css",
+    "main.js": "/bellmontefrontend/static/js/main.9b3f42a1.js",
     "static/js/787.66a566a6.chunk.js": "/bellmontefrontend/static/js/787.66a566a6.chunk.js",
     "static/media/truck.png": "/bellmontefrontend/static/media/truck.3c853c0f7d33ec8cdbbf.png",
     "static/media/background.png": "/bellmontefrontend/static/media/background.a00eab41895a1cb4b9cc.png",
@@ -25,12 +25,12 @@
     "static/media/slick.ttf": "/bellmontefrontend/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/bellmontefrontend/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/bellmontefrontend/index.html",
-    "main.53516bcc.css.map": "/bellmontefrontend/static/css/main.53516bcc.css.map",
-    "main.f1a32b7d.js.map": "/bellmontefrontend/static/js/main.f1a32b7d.js.map",
+    "main.44337888.css.map": "/bellmontefrontend/static/css/main.44337888.css.map",
+    "main.9b3f42a1.js.map": "/bellmontefrontend/static/js/main.9b3f42a1.js.map",
     "787.66a566a6.chunk.js.map": "/bellmontefrontend/static/js/787.66a566a6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.53516bcc.css",
-    "static/js/main.f1a32b7d.js"
+    "static/css/main.44337888.css",
+    "static/js/main.9b3f42a1.js"
   ]
 }
