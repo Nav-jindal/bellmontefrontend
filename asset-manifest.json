@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/bellmontefrontend/static/css/main.237b3056.css",
-    "main.js": "/bellmontefrontend/static/js/main.c117edf7.js",
+    "main.css": "/bellmontefrontend/static/css/main.528cd4fe.css",
+    "main.js": "/bellmontefrontend/static/js/main.d4ade4c4.js",
     "static/js/787.66a566a6.chunk.js": "/bellmontefrontend/static/js/787.66a566a6.chunk.js",
     "static/media/background.png": "/bellmontefrontend/static/media/background.a00eab41895a1cb4b9cc.png",
     "static/media/reefer_container.jpg": "/bellmontefrontend/static/media/reefer_container.53968f2c2ba3b57d232b.jpg",
@@ -38,12 +38,12 @@
     "index.html": "/bellmontefrontend/index.html",
     "static/media/twitter.svg": "/bellmontefrontend/static/media/twitter.2913a038d87f1712a6cdfe93a0106a27.svg",
     "static/media/facebook.svg": "/bellmontefrontend/static/media/facebook.971e53097e4398b3756a72fff5d44fc0.svg",
-    "main.237b3056.css.map": "/bellmontefrontend/static/css/main.237b3056.css.map",
-    "main.c117edf7.js.map": "/bellmontefrontend/static/js/main.c117edf7.js.map",
+    "main.528cd4fe.css.map": "/bellmontefrontend/static/css/main.528cd4fe.css.map",
+    "main.d4ade4c4.js.map": "/bellmontefrontend/static/js/main.d4ade4c4.js.map",
     "787.66a566a6.chunk.js.map": "/bellmontefrontend/static/js/787.66a566a6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.237b3056.css",
-    "static/js/main.c117edf7.js"
+    "static/css/main.528cd4fe.css",
+    "static/js/main.d4ade4c4.js"
   ]
 }
