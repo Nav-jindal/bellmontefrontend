@@ -96,13 +96,14 @@ const Footer = () => {
     return (
         <div className={footerStyles.footer}>
             <div className={footerStyles.col}>
-                <div className={footerStyles.logo}>
+                {/* <div className={footerStyles.logo}>
                     <img src={appLogo} alt='Bellmonte'/>
                     <div>
                         Reefer Vehicle <br/>
                         <span>Powered By Bellmonte</span>
                     </div>
-                </div>
+                </div> */}
+                <h3>Social Media</h3>
                 {socialMedia.map((menuItem, index) => (
                     <div className={footerStyles.socialMedia}>
                     <img src={menuItem.icon} alt='social icon'/>
