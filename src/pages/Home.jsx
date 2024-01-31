@@ -18,7 +18,6 @@ import secondClient from '../images/2.png'
 import thirdClient from '../images/3.png'
 import fourthClient from '../images/4.png'
 import fifthClient from '../images/5.png'
-import sixthClient from '../images/6.png'
 
 // Gallery Section Image
 import gallery1 from '../images/gallery-1.jpg'
@@ -64,7 +63,6 @@ const Home = () => {
         thirdClient,
         fourthClient,
         fifthClient,
-        sixthClient
     ]
 
     //Refs

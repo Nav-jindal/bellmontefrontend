@@ -5,8 +5,12 @@ import { NavLink, useNavigate } from 'react-router-dom'
 //Styling
 import footerStyles from '../../styles/Footer.module.sass'
 
-//Component
-import AppLogo from "../../icons/AppLogo"
+//import AppLogo from "../../icons/AppLogo"
+import appLogo from '../../images/logo.svg'
+import instagramLogo from '../../images/instagram.svg'
+import whatsappLogo from '../../images/whatsapp.svg'
+import facebookLogo from '../../images/facebook.svg'
+import twitterLogo from '../../images/twitter.svg'
 
 const Footer = () => {
     const navigate = useNavigate()
@@ -16,16 +20,25 @@ const Footer = () => {
             id: 0,
             title: 'Instagram',
             url: 'https://www.instagram.com/bellmonteindustriespvtltd/',
+            icon: instagramLogo,
         },
         {
             id: 1,
             title: 'Facebook',
             url: 'https://www.facebook.com/people/Bellmonte-Industries-Private-Limited/61555243996831/?is_tour_dismissed=true',
+            icon: facebookLogo,
         },
         {
             id: 2,
             title: 'Twitter',
             url: 'https://twitter.com/BellmontePvtLtd',
+            icon: twitterLogo,
+        },
+        {
+            id: 3,
+            title: '+91 9850344666',
+            url: '',
+            icon: whatsappLogo,
         },
     ]
     const navigationMenu = [
@@ -69,12 +82,12 @@ const Footer = () => {
         {
             id: 3,
             url: '/services',
-            title: 'Solution for Truck Subsidy'
+            title: 'Solution for Reefer Truck Subsidy'
         },
         {
             id: 4,
             url: '/services',
-            title: 'Solution for Truck Financing'
+            title: 'Solution for Reefer Truck Financing'
         },
         
        
@@ -84,11 +97,21 @@ const Footer = () => {
         <div className={footerStyles.footer}>
             <div className={footerStyles.col}>
                 <div className={footerStyles.logo}>
-                    <AppLogo height={40} width={40}/>
-                    Bellmonte
+                    <img src={appLogo} alt='Bellmonte'/>
+                    <div>
+                        Reefer Vehicle <br/>
+                        <span>Powered By Bellmonte</span>
+                    </div>
                 </div>
-                {socialMedia.map((menuItem, index) => 
-                    <a className='borderlessBtn' key={menuItem.id} href={menuItem.url} target="_blank">{menuItem.title}</a>
+                {socialMedia.map((menuItem, index) => (
+                    <div className={footerStyles.socialMedia}>
+                    <img src={menuItem.icon} alt='social icon'/>
+                    <a className={`borderlessBtn`} key={menuItem.id} href={menuItem.url} target="_blank"> 
+                        {menuItem.title}
+                    </a>
+                    </div>
+                )
+                    
                 )}
             </div>
             <div className={footerStyles.col}>

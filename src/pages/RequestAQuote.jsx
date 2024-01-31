@@ -47,6 +47,14 @@ const RequestAQuote = () => {
         '32 Foot',
     ]
 
+    const tyesSize = [
+        '',
+        '10',
+        '12',
+        '14',
+        '16',
+    ]
+
     // Functions
     const isNumber = (str) => {
         if (str.trim() === '') {
@@ -232,11 +240,26 @@ const RequestAQuote = () => {
                         required: 'This field is required',
                         onChange: e => {
                             handleNumberInputChange(e.target.value, e.target.id)
-                          },
-                          validate: value => !isNaN(parseInt(value)),
+                        },
+                        validate: value => !isNaN(parseInt(value)),
                     }}
                 />
                 
+                <div className={requestStyles.inputWrapper}>
+                    <label htmlFor='service'>Number of Tyres</label>
+                    <Controller
+                        name='nooftyres'
+                        control={control}
+                        errors={errors.nooftyres}
+                        rules={{required:'This field is required'}}
+                        render={({ field }) => (
+                        <select {...field} title='service' className={requestStyles.selectArrow}>
+                            {tyesSize?.map((service, index) => <option key={index} value={service ?? ''}>{service}</option>)}
+                        </select>
+                        )}
+                    />
+                    { errors.nooftyres && <div className={requestStyles.error}>{errors.nooftyres.message}</div>}
+                </div>
             </div>
             
             <button type='submit'className='primaryBtn' style={{border:'none', outline: 'none'}}>Submit</button>
