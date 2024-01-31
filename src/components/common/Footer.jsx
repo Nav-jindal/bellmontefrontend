@@ -34,12 +34,12 @@ const Footer = () => {
             url: 'https://twitter.com/BellmontePvtLtd',
             icon: twitterLogo,
         },
-        {
-            id: 3,
-            title: '+91 9850344666',
-            url: '',
-            icon: whatsappLogo,
-        },
+        // {
+        //     id: 3,
+        //     title: '+91 9850344666',
+        //     url: '',
+        //     icon: whatsappLogo,
+        // },
     ]
     const navigationMenu = [
         {
@@ -106,14 +106,16 @@ const Footer = () => {
                 <h3>Social Media</h3>
                 {socialMedia.map((menuItem, index) => (
                     <div className={footerStyles.socialMedia}>
-                    <img src={menuItem.icon} alt='social icon'/>
-                    <a className={`borderlessBtn`} key={menuItem.id} href={menuItem.url} target="_blank"> 
-                        {menuItem.title}
-                    </a>
+                        <img src={menuItem.icon} alt='social icon'/>
+                        <a className={`borderlessBtn`} key={menuItem.id} href={menuItem.url} target="_blank"> 
+                            {menuItem.title}
+                        </a>
                     </div>
-                )
-                    
-                )}
+                ))}
+                 <div className={footerStyles.socialMedia}>
+                    <img src={whatsappLogo} alt='social icon'/>
+                    <div className={footerStyles.whatsapp}>+91 9850344666</div>
+                </div>
             </div>
             <div className={footerStyles.col}>
                 <h3>Navigation</h3>
