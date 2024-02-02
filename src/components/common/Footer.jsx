@@ -72,7 +72,7 @@ const Footer = () => {
         {
             id: 1,
             url: '/services',
-            title: 'Solution for Container/ Box'
+            title: 'Solution for Reefer Container/ Box'
         },
         {
             id: 2,

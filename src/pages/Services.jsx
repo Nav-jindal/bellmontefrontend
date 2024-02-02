@@ -21,7 +21,7 @@ import truckFinance from '../images/truck_financing.jpg'
 import truckSubsidy from '../images/truck_subsidy.jpg'
 import reeferUnit from '../images/reefer_unit.jpg'
 
-const Services = (props) => {
+const Services = () => {
     const location = useLocation()
     console.log(location)
     // Constant
@@ -44,7 +44,7 @@ const Services = (props) => {
         {
             id: 1,
             url: reeferContainer,
-            title: 'Solution for Container/ Box',
+            title: 'Solution for Reefer Container/ Box',
             description: "These refrigerated chambers are the heroes of the highway, guarding your valuable cargo against the harsh realities of the road and weather. But choosing the right cooling container is more than just picking a size and a plug. It's about finding the perfect partner for your specific needs, ensuring consistent, reliable temperature control that protects your precious cargo. We partner with industry leaders like Surakhsha, Subzero, Zep to bring you a diverse range of cooling container options. From small, nimble units for urban deliveries to powerful, multi-compartment giants for cross-country hauls, we have the expertise to navigate the intricate world of temperature-controlled transportation",       
             partners: {
                 disable: false,
@@ -81,7 +81,7 @@ const Services = (props) => {
             id: 4,         
             url: truckFinance,
             title: 'Solution for Reefer Truck Financing',
-            description: "We are working with all Nationalized and Private Banks to fulfill your financial needs. Purchasing of Reefer Vehicles requires funds from various sources and as such promoters/owners may not be able to fund the entire project on their own sources. The entire Project cost up to 2 Crore is taken into consideration except land and collateral free funding can be arranged up to 89% of the project cost. Primary security would be the Hypothecation of Reefer Vehicles up to Rs. 50 Lakhs to 10 Crore.",
+            description: "We are working with all Nationalized and Private Banks to fulfil your financial needs. Purchasing of Reefer Vehicles requires funds from various sources and as such promoters/owners may not be able to fund the entire project on their own sources. We help to obtain a collateral free Bank Term Loan up to Rs 2.00 Crore 89 % of entire Project cost for purchasing of Reefer Vehicles with 3% of Interest Subvention from Central Government. Primary security would be the Hypothecation of Reefer Vehicles. We help to obtain a Bank Term Loan from Rs.10 Lacks to 10 Crore to purchase the Reefer Vehicles.",
             partners: {
                 disable: true
             }
