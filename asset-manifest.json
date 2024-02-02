@@ -1,10 +1,9 @@
 {
   "files": {
     "main.css": "/bellmontefrontend/static/css/main.528cd4fe.css",
-    "main.js": "/bellmontefrontend/static/js/main.d4ade4c4.js",
+    "main.js": "/bellmontefrontend/static/js/main.b30af858.js",
     "static/js/787.66a566a6.chunk.js": "/bellmontefrontend/static/js/787.66a566a6.chunk.js",
     "static/media/background.png": "/bellmontefrontend/static/media/background.a00eab41895a1cb4b9cc.png",
-    "static/media/reefer_container.jpg": "/bellmontefrontend/static/media/reefer_container.53968f2c2ba3b57d232b.jpg",
     "static/media/truck_financing.jpg": "/bellmontefrontend/static/media/truck_financing.2de92805f15206ba2a49.jpg",
     "static/media/truck_subsidy.jpg": "/bellmontefrontend/static/media/truck_subsidy.f48d352738d353222951.jpg",
     "static/media/truck.png": "/bellmontefrontend/static/media/truck.02cea935a45fb1915c4a.png",
@@ -16,17 +15,18 @@
     "static/media/gallery-6.jpg": "/bellmontefrontend/static/media/gallery-6.63eab12af186631e65dc.jpg",
     "static/media/gallery-1.jpg": "/bellmontefrontend/static/media/gallery-1.6470c522bbd943b9c364.jpg",
     "static/media/gallery-5.jpg": "/bellmontefrontend/static/media/gallery-5.e787b8792a1e7b7f125f.jpg",
+    "static/media/truck_chasis.jpg": "/bellmontefrontend/static/media/truck_chasis.94d32519af34beb13ed6.jpg",
     "static/media/gallery-3.jpg": "/bellmontefrontend/static/media/gallery-3.ae8fd6e6cfcae46b143a.jpg",
     "static/media/subzero.svg": "/bellmontefrontend/static/media/subzero.5f07e05c6d19604721700a12ec89e5cf.svg",
     "static/media/zep.svg": "/bellmontefrontend/static/media/zep.423e93356f726808e676fa44198788b4.svg",
+    "static/media/reefer_unit.jpg": "/bellmontefrontend/static/media/reefer_unit.1b3b0cb5122376e445aa.jpg",
     "static/media/carrierTransportation.svg": "/bellmontefrontend/static/media/carrierTransportation.7fae9e08ba87b4e400757e91ca5bbc41.svg",
     "static/media/surakhsha.svg": "/bellmontefrontend/static/media/surakhsha.c8f645f5057a9f4213c75601347ace84.svg",
     "static/media/BharatBenz.svg": "/bellmontefrontend/static/media/BharatBenz.bcff87db43e73dc5471941110ccdd2e5.svg",
     "static/media/thermoKing.svg": "/bellmontefrontend/static/media/thermoKing.bbcac45b9b7a7907ddb044fc4bd0f623.svg",
     "static/media/tata.svg": "/bellmontefrontend/static/media/tata.c7b5a4f1eefc9afd679284f62d098835.svg",
     "static/media/logo.svg": "/bellmontefrontend/static/media/logo.8d49cbfdf4b9d903d32d6990897180db.svg",
-    "static/media/reefer_unit.jpg": "/bellmontefrontend/static/media/reefer_unit.ee585715736dbb2cdac3.jpg",
-    "static/media/truck_chasis.jpg": "/bellmontefrontend/static/media/truck_chasis.2dba73b3e2149ee4428f.jpg",
+    "static/media/reefer_container.jpg": "/bellmontefrontend/static/media/reefer_container.65f0c800970b4ee1f6c3.jpg",
     "static/media/ashokLeyland.svg": "/bellmontefrontend/static/media/ashokLeyland.5306deefd53e555d198b66ef7fe85184.svg",
     "static/media/Eicher.svg": "/bellmontefrontend/static/media/Eicher.41552eac159f2796ff705164ec12f36c.svg",
     "static/media/slick.svg": "/bellmontefrontend/static/media/slick.2630a3e3eab21c607e21.svg",
@@ -39,11 +39,11 @@
     "static/media/twitter.svg": "/bellmontefrontend/static/media/twitter.2913a038d87f1712a6cdfe93a0106a27.svg",
     "static/media/facebook.svg": "/bellmontefrontend/static/media/facebook.971e53097e4398b3756a72fff5d44fc0.svg",
     "main.528cd4fe.css.map": "/bellmontefrontend/static/css/main.528cd4fe.css.map",
-    "main.d4ade4c4.js.map": "/bellmontefrontend/static/js/main.d4ade4c4.js.map",
+    "main.b30af858.js.map": "/bellmontefrontend/static/js/main.b30af858.js.map",
     "787.66a566a6.chunk.js.map": "/bellmontefrontend/static/js/787.66a566a6.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.528cd4fe.css",
-    "static/js/main.d4ade4c4.js"
+    "static/js/main.b30af858.js"
   ]
 }
