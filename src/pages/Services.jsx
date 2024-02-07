@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react"
 import { NavLink, useLocation } from "react-router-dom"
 
-// Company images
+// Company/ Partners images
 import tata from '../images/tata.svg'
 import bharatBenz from '../images/BharatBenz.svg'
 import eicher from '../images/Eicher.svg'
@@ -13,18 +13,18 @@ import zep from '../images/zep.svg'
 import thermoKing from '../images/thermoKing.svg'
 import carrier from '../images/carrierTransportation.svg'
 
-// Styling & Images
+// Styling & Services Images
 import servicesStyles from '../styles/Services.module.sass'
 import truckChassis from '../images/truck_chasis.jpg'
 import reeferContainer from '../images/reefer_container.jpg'
 import truckFinance from '../images/truck_financing.jpg'
 import truckSubsidy from '../images/truck_subsidy.jpg'
 import reeferUnit from '../images/reefer_unit.jpg'
+import commercialVehicle from '../images/commercialVehicle.jpg'
 
 const Services = () => {
-    const location = useLocation()
-    console.log(location)
     // Constant
+    const location = useLocation()
     const servicesArray = [
         {
             id: 0,
@@ -86,6 +86,15 @@ const Services = () => {
                 disable: true
             }
         },
+        {
+            id: 5,         
+            url: commercialVehicle,
+            title: 'Solution for Commercial Vehicle /Truck Financing',
+            description: "We are working with all Nationalized and Private Banks to fulfil your financial needs. Purchasing of Commercial Vehicle /Truck requires funds from various sources and as such promoters/owners may not be able to fund the entire project on their own sources. We help to obtain a Bank Term Loan up to Rs.10 Lacks to 10 Crore 99 % of entire Project cost at Lowest Interest Rate for purchasing of Commercial Vehicle /Truck. Primary security would be the Hypothecation of Reefer Vehicles.",
+            partners: {
+                disable: true
+            }
+        },
     ]
 
     // States
@@ -100,6 +109,7 @@ const Services = () => {
         setCurrentTab(location?.state?.tabToOpen ?? 0)
         window.scrollTo(0, 0);
     },[location])
+
     return <div>
         <h2 className={servicesStyles.heading}>Services</h2>
         <div className={servicesStyles.tabsHeading}>
@@ -186,17 +196,15 @@ const Services = () => {
                 </div>
                 
                 </div>}
-                    <div>
-                        {servicesArray[currentTab].partners.disable === false && <h3>Our Partners</h3>}
-                        {
-                        servicesArray[currentTab].partners.disable === false && 
-                            servicesArray[currentTab].partners.icons.map((icon, index)=> (
-                                <img src={icon} alt='icons' style={{height: '75px', width: 'auto', marginRight: '25px', marginTop: '15px'}}/>
-                            ))
-                         }
-                    </div>
-                
-                
+                <div>
+                    {servicesArray[currentTab].partners.disable === false && <h3>Our Partners</h3>}
+                    {
+                    servicesArray[currentTab].partners.disable === false && 
+                        servicesArray[currentTab].partners.icons.map((icon, index)=> (
+                            <img src={icon} alt='icons' style={{height: '75px', width: 'auto', marginRight: '25px', marginTop: '15px'}}/>
+                        ))
+                    }
+                </div>
             </div>
             
         </div>

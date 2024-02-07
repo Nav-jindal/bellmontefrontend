@@ -1,22 +1,15 @@
 // Packages
 import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom';
-import { animateScroll as scroll } from 'react-scroll';
 
 // Images & Styling
 import appLogo from '../../images/logo.svg'
 import navStyle from '../../styles/Navbar.module.sass'
 
 // Components
-import CloseIcon from '../../icons/CloseIcon'
-import HamburgerIcon from '../../icons/HamburgerIcon'
+import { FaBars, FaXmark } from "react-icons/fa6";
 
 const Navbar = () => {
-
-    // Functions
-    const onClickContact = () => {
-        scroll.scrollToBottom({ duration: 2100, smooth: 'easeInOut' });
-    }
 
     // States
     const [toggleMobileNavOverlay, setToggleMobileNavOverlay] = useState(false)
@@ -35,7 +28,7 @@ const Navbar = () => {
             className={navStyle.hamburgerMenu} 
             onClick={() => setToggleMobileNavOverlay(true)}
         >
-            <HamburgerIcon height={36} width={36} />
+            <FaBars style={{height:'24px', width: '24px'}} />
         </div>
 
         <div className={`${toggleMobileNavOverlay ? navStyle.dBlock : navStyle.dHidden} ${navStyle.mobileOverlayBg}`}
@@ -46,13 +39,13 @@ const Navbar = () => {
         </div>
         <div className={`${navStyle.navLinksWrapper} ${toggleMobileNavOverlay ? navStyle.dBlock : navStyle.dHidden}`} >
             <div className={navStyle.hamburgerMenu} onClick={() => setToggleMobileNavOverlay(false)}>
-                <CloseIcon height={36} width={36} />
+                <FaXmark style={{height:'24px', width: '24px'}}/>
             </div>
             <div className={navStyle.navLinks}>
                 <NavLink className='borderlessBtn' to='/'>Home</NavLink>
-                <NavLink className='borderlessBtn' to='/about'>About</NavLink>
+                <NavLink className='borderlessBtn' to='/about'>About us</NavLink>
                 <NavLink className='borderlessBtn' to='/services'>Services</NavLink>
-                <div className='borderlessBtn' onClick={onClickContact}>Contact</div>
+                <NavLink className='borderlessBtn' to='/contact'>Contact us</NavLink>
                 <NavLink className='borderlessBtn' to='/requestaquote'>Request a Quote</NavLink>
             </div>
         </div>

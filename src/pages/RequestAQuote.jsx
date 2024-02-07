@@ -1,5 +1,6 @@
 // Packages
 import React, { useEffect } from "react"
+import axios from "axios"
 import { useForm, Controller } from "react-hook-form"
 
 // Stylings
@@ -73,17 +74,33 @@ const RequestAQuote = () => {
 
     const submitRequestaQuote = async (data) => {
         reset()
-        alert('Email sent sucessfully')
-        const res = await fetch('/register',{
-            method:'POST',
-            headers: {
-                "Content-Type": 'application/json'
-            },
-            body: JSON.stringify({
-                data: data
-            })
-        })
+        alert('Email Sent Successfully')
+        // const res = await fetch('/register',{
+        //     method:'POST',
+        //     headers: {
+        //         "Content-Type": 'application/json'
+        //     },
+        //     body: JSON.stringify({
+        //         data: data
+        //     })
+        // })
         
+        if(data){
+            axios.post('http://localhost:5000/send_email',{
+                data: data
+            }) 
+        }
+        //     .then(()=>{ 
+        //             alert('Email sent sucessfully'); 
+        //             reset()
+        //         })
+        //         .catch(()=>{ 
+        //             alert('Encountered an error while sending the email')
+        //         })
+        // } else {
+        //     alert('Encountered an error while submitting the form')
+        // }
+
         // const dataFromServer = await res.json()
 
         // if( dataFromServer.status === 401 || !dataFromServer)  {
@@ -92,12 +109,13 @@ const RequestAQuote = () => {
         //     alert('Email Sent Successfully!')
         //     reset()
         // }
-
     }
 
+    // Effects
     useEffect(() => {
         window.scrollTo(0, 0);
-      },[]);
+    },[])
+
     return <div>
         <h2 className={requestStyles.heading}>Request a quote</h2>
 
@@ -248,9 +266,9 @@ const RequestAQuote = () => {
                 <div className={requestStyles.inputWrapper}>
                     <label htmlFor='service'>Number of Tyres</label>
                     <Controller
-                        name='nooftyres'
+                        name='noOfTyres'
                         control={control}
-                        errors={errors.nooftyres}
+                        errors={errors.noOfTyres}
                         rules={{required:'This field is required'}}
                         render={({ field }) => (
                         <select {...field} title='service' className={requestStyles.selectArrow}>
@@ -258,7 +276,7 @@ const RequestAQuote = () => {
                         </select>
                         )}
                     />
-                    { errors.nooftyres && <div className={requestStyles.error}>{errors.nooftyres.message}</div>}
+                    { errors.noOfTyres && <div className={requestStyles.error}>{errors.noOfTyres.message}</div>}
                 </div>
             </div>
             

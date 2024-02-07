@@ -47,9 +47,6 @@ const About = () => {
                 <img src={gallery4} alt='fourth image'/>
             </div>
         </Slider>
-        {/* <div className={`${aboutStyles.imageWrapper} fullWidth`}>
-            <img src={aboutImage} alt='about image' />
-        </div> */}
         <div className={aboutStyles.aboutContentWrapper}>
           
             <div><h3>Providing Customized Cooling Solutions</h3></div>
@@ -70,10 +67,7 @@ const About = () => {
                 is ever too important to sacrifice our integrity in the name of profit. Our 15+ years of 
                 combined experience in building and selling refrigerated delivery vehicles ensures you are 
                 in the right place for your reefer truck needs.
-
             </p>
-
-            
         </div>
     </div>
 }

@@ -1,8 +1,6 @@
 // Packages
 import React from "react"
 
-// Components
-
 const FeatureCard = ({ icon, title, description, }) => {
     return <div className='featureCard'>
         <div className='icon'>
