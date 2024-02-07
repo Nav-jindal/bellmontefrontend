@@ -2,14 +2,13 @@
 import React from "react"
 import { NavLink, useNavigate } from 'react-router-dom'
 
-//Styling
+//Styling & Icons
 import footerStyles from '../../styles/Footer.module.sass'
-import appLogo from '../../images/logo.svg'
+import twitterIcon from '../../images/twitter.svg'
+import facebookIcon from '../../images/facebook.svg'
+import whatsappIcon from '../../images/whatsapp.svg'
+import instagramIcon from '../../images/instagram.svg'
 import { 
-    FaSquareXTwitter, 
-    FaSquareFacebook, 
-    FaSquareInstagram, 
-    FaSquareWhatsapp,
     FaPhone, 
     FaEnvelopeCircleCheck, 
     FaLocationDot  
@@ -23,25 +22,25 @@ const Footer = () => {
             id: 0,
             title: 'Instagram',
             url: 'https://www.instagram.com/bellmonteindustriespvtltd/',
-            icon: <FaSquareInstagram style={{width:'24px', height: '24px'}}/>,
+            icon: instagramIcon,
         },
         {
             id: 1,
             title: 'Facebook',
             url: 'https://www.facebook.com/people/Bellmonte-Industries-Private-Limited/61555243996831/?is_tour_dismissed=true',
-            icon: <FaSquareFacebook style={{width:'24px', height: '24px'}}/>,
+            icon: facebookIcon,
         },
         {
             id: 2,
             title: 'Twitter',
             url: 'https://twitter.com/BellmontePvtLtd',
-            icon: <FaSquareXTwitter style={{width:'24px', height: '24px'}}/>,
+            icon: twitterIcon,
         },
         {
             id: 3,
             title: '+91 9850344666',
             url: 'http://wa.link/logmk9',
-            icon: <FaSquareWhatsapp style={{width:'24px', height: '24px'}}/>,
+            icon: whatsappIcon,
         },
     ]
     const navigationMenu = [
@@ -51,15 +50,15 @@ const Footer = () => {
         },
         {
             url: '/about',
-            title: 'About'
+            title: 'About us'
         },
         {
             url: '/services',
             title: 'Services'
         },
         {
-            url: '',
-            title: 'Contact'
+            url: '/contact',
+            title: 'Contact us'
         },
         {
             url: '/requestaquote',
@@ -108,7 +107,7 @@ const Footer = () => {
                 <h3>Social Media</h3>
                 {socialMedia.map((menuItem, index) => (
                     <div className={footerStyles.socialMedia}>
-                        {menuItem.icon}
+                        <img src={menuItem.icon} alt={menuItem.title} />
                         <a className={`borderlessBtn`} key={menuItem.id} href={menuItem.url} target="_blank"> 
                             {menuItem.title}
                         </a>
@@ -140,15 +139,21 @@ const Footer = () => {
                 </p>
                 <div className={footerStyles.contactItem}>
                 <FaPhone style={{width:'18px', height:'18px'}}/>
-                <a href="#" className={footerStyles.contact}>+919850344666</a>
+                <a href="tel:+919850344666" className={footerStyles.contact}>+919850344666</a>
                 </div>
                 <div className={footerStyles.contactItem}>
                     <FaLocationDot style={{width:'18px', height:'18px'}}/>
-                    <a href="#" className={footerStyles.contact}>1110, Plot No. E, 3A, Sector 12, Kharghar, Navi Mumbai, Maharashtra 410210</a>
+                    <a 
+                        href="https://www.google.com/maps/search/Goodwill+Infinity,1110,11th+Floor,Plot+No+E,3A,Sector-12,Kharghar,+Navi+Mumbai,+Maharashtra+410210,+India/@19.0393,73.064,17z?hl=en&entry=ttu" 
+                        className={footerStyles.contact}
+                        target="_blank"
+                    >
+                        1110, Plot No. E, 3A, Sector 12, Kharghar, Navi Mumbai, Maharashtra 410210
+                    </a>
                 </div>
                 <div className={footerStyles.contactItem}>
                     <FaEnvelopeCircleCheck style={{width:'20px', height:'18px'}}/>
-                    <a href="#" className={footerStyles.contact}>support@reefervehicle.com</a>
+                    <a href="mailto:support@reefervehicle.com" className={footerStyles.contact}>support@reefervehicle.com</a>
                 </div>
             </div>
         </div>
