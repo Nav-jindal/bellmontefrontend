@@ -18,7 +18,7 @@ const About = () => {
     },[]);
 
     return <div>
-        <h2>About</h2>
+        <h2>About us</h2>
         <Slider 
             dots={true}
             arrows={true}
@@ -49,11 +49,11 @@ const About = () => {
         </Slider>
         <div className={aboutStyles.aboutContentWrapper}>
           
-            <div><h3>Providing Customized Cooling Solutions</h3></div>
+            <div><h3>Providing Customized Solutions for Reefer / Refrigerated  Vehicle</h3></div>
             <p> Bellmonte Industries Private Limited is your one stop Solution for all your Reefer / Refrigerated Vehicles 
                 Transportation Company. We will start from beginning the project 
                 from Designing & Drawing, Preparation of Detailed Project Report, Solution and assistance for availing 
-                Finance and Subsidy for the project from 20’ to 32’ Reefer / Refrigerated Container, we will design and
+                Finance and Subsidy for the project from 20' to 32' Reefer / Refrigerated Container, we will design and
                 build the perfect solution for your company. We work with all Truck Chassis, Body and Refrigeration unit
                 manufacturers to ensure you get the right delivery vehicle. We work with all Nationalized and Private 
                 Banks to fulfill your financial needs. We work with The Ministry of Agriculture & Farmers Welfare; 
@@ -62,7 +62,7 @@ const About = () => {
 
                 Our vehicle selection includes various refrigerated trucks and vans which offer the 
                 ideal way to deliver Fruits and Vegetables, Frozen Foods, Medicine, Fish, Meat. Bellmonte 
-                Industries Private Limited’s Transportation Solutions is a refrigerated truck manufacturer 
+                Industries Private Limited's Transportation Solutions is a refrigerated truck manufacturer 
                 based on providing superior service with honesty. The owners enjoy what they do. No deal 
                 is ever too important to sacrifice our integrity in the name of profit. Our 15+ years of 
                 combined experience in building and selling refrigerated delivery vehicles ensures you are 

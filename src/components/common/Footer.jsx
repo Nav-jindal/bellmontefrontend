@@ -106,7 +106,7 @@ const Footer = () => {
             <div className={footerStyles.col}>
                 <h3>Social Media</h3>
                 {socialMedia.map((menuItem, index) => (
-                    <div className={footerStyles.socialMedia}>
+                    <div className={footerStyles.socialMedia} key={index}>
                         <img src={menuItem.icon} alt={menuItem.title} />
                         <a className={`borderlessBtn`} key={menuItem.id} href={menuItem.url} target="_blank"> 
                             {menuItem.title}
@@ -128,7 +128,7 @@ const Footer = () => {
                 <h3>Services</h3>
                 {servicesMenu.map((menuItem, index) => 
                     // <NavLink key={index} to={menuItem.url}>
-                        <div className='borderlessBtn' onClick={()=>{navigate(`${menuItem.url}`, {state: {tabToOpen: menuItem.id}})}}>{menuItem.title}</div>
+                        <div className='borderlessBtn' key ={index} onClick={()=>{navigate(`${menuItem.url}`, {state: {tabToOpen: menuItem.id}})}}>{menuItem.title}</div>
                     // </NavLink>
                 )}
             </div>
@@ -138,8 +138,9 @@ const Footer = () => {
                     feel free to contact with our team.
                 </p>
                 <div className={footerStyles.contactItem}>
-                <FaPhone style={{width:'18px', height:'18px'}}/>
-                <a href="tel:+919850344666" className={footerStyles.contact}>+919850344666</a>
+                    <FaPhone style={{width:'18px', height:'18px'}}/>
+                    <a href="tel:+9102235123293" className={footerStyles.contact}>022 3512 3293,</a>
+                    <a href="tel:+9102235128536" className={footerStyles.contact}>022 3512 8536</a>
                 </div>
                 <div className={footerStyles.contactItem}>
                     <FaLocationDot style={{width:'18px', height:'18px'}}/>

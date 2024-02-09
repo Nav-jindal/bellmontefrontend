@@ -13,14 +13,15 @@ const Contact = () => {
         window.scrollTo(0, 0);
     },[]);
     return <div>
-        <h2>Contact</h2>
+        <h2>Contact us</h2>
         <div className={contactStyles.contactWrapper}>
             <p> If you have any questions or need help, 
                 feel free to contact with our team.
             </p>
             <div className={contactStyles.contactItem}>
                 <FaPhone style={{width:'18px', height:'18px'}}/>
-                <a href="tel:+919850344666" className={contactStyles.contact}>+919850344666</a>
+                <a href="tel:+9102235123293" className={contactStyles.contact}>022 3512 3293,</a>
+                <a href="tel:+9102235128536" className={contactStyles.contact}>022 3512 8536</a>
             </div>
             <div className={contactStyles.contactItem}>
                 <FaLocationDot style={{width:'18px', height:'18px'}}/>

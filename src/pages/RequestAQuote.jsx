@@ -18,11 +18,7 @@ const RequestAQuote = () => {
         formState: { errors },
         setValue,
         reset,
-    } = useForm({
-        initialValues: {
-            service: 'Cold Storage Solutions'
-        }
-    })
+    } = useForm()
 
     const reeferUnit = [
         '',
@@ -31,14 +27,15 @@ const RequestAQuote = () => {
     ]
     const vehicleModel = [
         '',
-        'Tata',
         'Ashok Layland',
-        'Eicher',
         'Bharat Benz',
+        'Eicher',
+        'Tata',
     ]
 
     const containerSize = [
         '',
+        '17 Foot',
         '20 Foot',
         '22 Foot',
         '24 Foot',
@@ -50,6 +47,7 @@ const RequestAQuote = () => {
 
     const tyesSize = [
         '',
+        '6',
         '10',
         '12',
         '14',
@@ -74,41 +72,17 @@ const RequestAQuote = () => {
 
     const submitRequestaQuote = async (data) => {
         reset()
-        alert('Email Sent Successfully')
-        // const res = await fetch('/register',{
-        //     method:'POST',
-        //     headers: {
-        //         "Content-Type": 'application/json'
-        //     },
-        //     body: JSON.stringify({
-        //         data: data
-        //     })
-        // })
-        
         if(data){
-            axios.post('http://localhost:5000/send_email',{
-                data: data
-            }) 
+            axios.post('http://localhost/email/email.php', 
+            data).then(()=>{ 
+                        alert('Email sent sucessfully'); 
+                        })
+                .catch(()=>{ 
+                        alert('Encountered an error while sending the email')
+                        })
+        } else {
+            alert('Encountered an error while submitting the form')
         }
-        //     .then(()=>{ 
-        //             alert('Email sent sucessfully'); 
-        //             reset()
-        //         })
-        //         .catch(()=>{ 
-        //             alert('Encountered an error while sending the email')
-        //         })
-        // } else {
-        //     alert('Encountered an error while submitting the form')
-        // }
-
-        // const dataFromServer = await res.json()
-
-        // if( dataFromServer.status === 401 || !dataFromServer)  {
-        //     alert('Email not sent')
-        // } else {
-        //     alert('Email Sent Successfully!')
-        //     reset()
-        // }
     }
 
     // Effects
@@ -118,7 +92,6 @@ const RequestAQuote = () => {
 
     return <div>
         <h2 className={requestStyles.heading}>Request a quote</h2>
-
         <form onSubmit={handleSubmit(submitRequestaQuote)}>
             <h3 className={requestStyles.subHeading}>Basic Info</h3>
             <div className={requestStyles.sectionWrapper}>

@@ -21,13 +21,13 @@ function App() {
     <div className='app'>
       <Navbar />
       <div className='mainContent'>
-        <Routes>
-          <Route path='/' element={ <Home/> }/>
-          <Route path='/about' element= { <About /> } />
-          <Route path='/services' element={ <Services/> } />
-          <Route path='/contact' element= { <Contact /> } />
-          <Route path='/requestaquote' element={ <RequestAQuote/> } />
-        </Routes>
+          <Routes>
+            <Route path='/' element={ <Home/> }/>
+            <Route path='/about' element= { <About /> } />
+            <Route path='/services' element={ <Services/> } />
+            <Route path='/contact' element= { <Contact /> } />
+            <Route path='/requestaquote' element={ <RequestAQuote/> } />
+          </Routes>
       </div>
       <Footer />
     </div>
