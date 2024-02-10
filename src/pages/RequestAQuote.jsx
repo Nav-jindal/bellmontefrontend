@@ -73,7 +73,7 @@ const RequestAQuote = () => {
     const submitRequestaQuote = async (data) => {
         reset()
         if(data){
-            axios.post('http://localhost/email/email.php', 
+            axios.post('https://reefervehicle.com/email/email.php', 
             data).then(()=>{ 
                         alert('Email sent sucessfully'); 
                         })
