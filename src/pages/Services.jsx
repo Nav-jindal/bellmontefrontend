@@ -180,16 +180,16 @@ const Services = () => {
                     </tr>
                     <tr>
                         <td>1.</td>
-                        <td>Reefer Vehicles Project Subsidy</td>
+                        <td>Capital Subsidy for Integrated Post Harvest Management Projects of Refrigerated Vehicles @ 50 %</td>
                         <td> Uttar Pradesh</td>
-                        <td> 35%</td>
+                        <td> 50%</td>
                         <td> Rs 10.00 crore per project</td>
                     </tr>
                     <tr>
                         <td>2.</td>
-                        <td>Interest Subvention @7% : .Maximum repayment Period: 5 years inclusive of moratorium</td>
+                        <td>Interest Subvention Subsidy @100% of actual Interest: Maximum repayment Period: 5 years inclusive of Moratorium Period. </td>
                         <td>Uttar Pradesh</td>
-                        <td>7%</td>
+                        <td>100%</td>
                         <td>Rs 50.00 Lakhs per project</td>
                     </tr>
                 </table>
