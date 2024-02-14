@@ -35,16 +35,17 @@ try {
     //Server settings
     $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
     $mail->isSMTP();                                            //Send using SMTP
-    $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
+    $mail->Host       = 'reefervehicle.com';                     //Set the SMTP server to send through
     $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-    $mail->Username   = 'jindalnav23@gmail.com';                     //SMTP username
-    $mail->Password   = 'ozct qssq hxtw ruxm';                               //SMTP password
+    $mail->Username   = 'info@reefervehicle.com';                     //SMTP username
+    $mail->Password   = 'ramesh@4141';                               //SMTP password
     $mail->SMTPSecure = 'ssl';            //Enable implicit TLS encryption
     $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
     //Recipients
-    $mail->setFrom('jindalnav23@gmail.com');
+    $mail->setFrom('info@reefervehicle.com');
     $mail->addAddress($data->email);
+    $mail->addAddress('info@reefervehicle.com');
    //Optional name
 
     //Content
