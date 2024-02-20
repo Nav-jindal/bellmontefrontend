@@ -187,7 +187,7 @@ const Services = () => {
                     </tr>
                     <tr>
                         <td>2.</td>
-                        <td>Interest Subvention @7% : .Maximum repayment Period: 5 years inclusive of moratorium</td>
+                        <td>Interest Subvention Subsidy @100% of actual Interest: Maximum repayment Period up to 5 years inclusive of Moratorium Period. </td>
                         <td>Uttar Pradesh</td>
                         <td>100%</td>
                         <td>Rs 50.00 Lakhs per project</td>
