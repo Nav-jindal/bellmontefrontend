@@ -182,7 +182,7 @@ const Services = () => {
                         <td>1.</td>
                         <td>Capital Subsidy for Integrated Post Harvest Management Projects of Cold chain and Refrigerated Vehicles @35 % to 50 %</td>
                         <td>Uttar Pradesh</td>
-                        <td>35 % to 50 %</td>
+                        <td style={{whiteSpace:'nowrap'}}>35 % to 50 %</td>
                         <td> Rs 10.00 crore per project</td>
                     </tr>
                     <tr>
