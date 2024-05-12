@@ -12,6 +12,7 @@ import subzero from '../images/subzero.svg'
 import zep from '../images/zep.svg'
 import thermoKing from '../images/thermoKing.svg'
 import carrier from '../images/carrierTransportation.svg'
+import kryoLauri from '../images/kryoLauri.svg'
 
 // Styling & Services Images
 import servicesStyles from '../styles/Services.module.sass'
@@ -52,6 +53,7 @@ const Services = () => {
                     surakhsha,
                     subzero,
                     zep,
+                    kryoLauri,
                 ]
             }
         },

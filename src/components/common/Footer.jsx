@@ -108,7 +108,11 @@ const Footer = () => {
                 {socialMedia.map((menuItem, index) => (
                     <div className={footerStyles.socialMedia} key={index}>
                         <img src={menuItem.icon} alt={menuItem.title} />
-                        <a className={`borderlessBtn`} key={menuItem.id} href={menuItem.url} target="_blank"> 
+                        <a  className={`borderlessBtn`} 
+                            key={menuItem.id} href={menuItem.url} 
+                            target="_blank"
+                            rel="noreferrer"
+                            > 
                             {menuItem.title}
                         </a>
                     </div>
@@ -148,8 +152,9 @@ const Footer = () => {
                         href="https://www.google.com/maps/search/Goodwill+Infinity,1110,11th+Floor,Plot+No+E,3A,Sector-12,Kharghar,+Navi+Mumbai,+Maharashtra+410210,+India/@19.0393,73.064,17z?hl=en&entry=ttu" 
                         className={footerStyles.contact}
                         target="_blank"
+                        rel="noreferrer"
                     >
-                        1110, Plot No. E, 3A, Sector 12, Kharghar, Navi Mumbai, Maharashtra 410210
+                        Goodwill Infinity 1110, Plot No. E, 3A, Sector 12, Kharghar, Navi Mumbai, Maharashtra 410210
                     </a>
                 </div>
                 <div className={footerStyles.contactItem}>
