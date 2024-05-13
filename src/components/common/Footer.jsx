@@ -154,7 +154,7 @@ const Footer = () => {
                         target="_blank"
                         rel="noreferrer"
                     >
-                        Goodwill Infinity 1110, Plot No. E, 3A, Sector 12, Kharghar, Navi Mumbai, Maharashtra 410210
+                        Goodwill Infinity, 1110, Plot No. E, 3A, Sector 12, Kharghar, Navi Mumbai, Maharashtra 410210
                     </a>
                 </div>
                 <div className={footerStyles.contactItem}>
