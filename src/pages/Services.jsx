@@ -46,7 +46,7 @@ const Services = () => {
             id: 1,
             url: reeferContainer,
             title: 'Solution for Reefer Container/ Box',
-            description: "These refrigerated chambers are the heroes of the highway, guarding your valuable cargo against the harsh realities of the road and weather. But choosing the right cooling container is more than just picking a size and a plug. It's about finding the perfect partner for your specific needs, ensuring consistent, reliable temperature control that protects your precious cargo. We partner with industry leaders like Surakhsha, Subzero, Zep to bring you a diverse range of cooling container options. From small, nimble units for urban deliveries to powerful, multi-compartment giants for cross-country hauls, we have the expertise to navigate the intricate world of temperature-controlled transportation",       
+            description: "These refrigerated chambers are the heroes of the highway, guarding your valuable cargo against the harsh realities of the road and weather. But choosing the right cooling container is more than just picking a size and a plug. It's about finding the perfect partner for your specific needs, ensuring consistent, reliable temperature control that protects your precious cargo. We partner with industry leaders like Surakhsha, Subzero, Zep to bring you a diverse range of cooling container options. From small, nimble units for urban deliveries to powerful, multi-compartment giants for cross-country hauls, we have the expertise to navigate the intricate world of temperature-controlled transportation",
             partners: {
                 disable: false,
                 icons: [
@@ -80,16 +80,16 @@ const Services = () => {
             }
         },
         {
-            id: 4,         
+            id: 4,
             url: truckFinance,
             title: 'Solution for Reefer Truck Financing',
-            description: "We are working with all Nationalized and Private Banks to fulfil your financial needs. Purchasing of Reefer Vehicles requires funds from various sources and as such promoters/owners may not be able to fund the entire project on their own sources. We help to obtain a collateral free Bank Term Loan up to Rs 2.00 Crore 89 % of entire Project cost for purchasing of Reefer Vehicles with 3% of Interest Subvention from Central Government. Primary security would be the Hypothecation of Reefer Vehicles. We help to obtain a Bank Term Loan from Rs.10 Lacks to 10 Crore to purchase the Reefer Vehicles.",
+            description: "We are working with all Nationalized and Private Banks to fulfil your financial needs. Purchasing of Reefer Vehicles requires funds from various sources and as such promoters/owners may not be able to fund the entire project on their own sources. We help to obtain a collateral free Bank Term Loan up to Rs 5.00 Crore 90 % of entire Project cost for purchasing of Reefer Vehicles with 3% of Interest Subvention from Central Government. Primary security would be the Hypothecation of Reefer Vehicles. We help to obtain a Bank Term Loan from Rs.10 Lacks to 10 Crore to purchase the Reefer Vehicles.",
             partners: {
                 disable: true
             }
         },
         {
-            id: 5,         
+            id: 5,
             url: commercialVehicle,
             title: 'Solution for Commercial Vehicle /Truck Financing',
             description: "We are working with all Nationalized and Private Banks to fulfil your financial needs. Purchasing of Commercial Vehicle /Truck requires funds from various sources and as such promoters/owners may not be able to fund the entire project on their own sources. We help to obtain a Bank Term Loan up to Rs.10 Lacks to 10 Crore 99 % of entire Project cost at Lowest Interest Rate for purchasing of Commercial Vehicle /Truck. Primary security would be the Hypothecation of Reefer Vehicles.",
@@ -105,21 +105,21 @@ const Services = () => {
     // Effect
     useEffect(() => {
         window.scrollTo(0, 0);
-    },[]);
+    }, []);
 
-    useEffect(()=>{
+    useEffect(() => {
         setCurrentTab(location?.state?.tabToOpen ?? 0)
         window.scrollTo(0, 0);
-    },[location])
+    }, [location])
 
     return <div>
         <h2 className={servicesStyles.heading}>Services</h2>
         <div className={servicesStyles.tabsHeading}>
-            {servicesArray.map((tab, index) => 
-                <div 
-                    className={`${currentTab === tab?.id ? servicesStyles.active : '' } borderlessBtn `}
-                    key={tab?.id} 
-                    onClick={()=>setCurrentTab(tab?.id)}
+            {servicesArray.map((tab, index) =>
+                <div
+                    className={`${currentTab === tab?.id ? servicesStyles.active : ''} borderlessBtn `}
+                    key={tab?.id}
+                    onClick={() => setCurrentTab(tab?.id)}
                 >
                     {tab?.title}
                 </div>
@@ -127,8 +127,8 @@ const Services = () => {
         </div>
 
         <div className={`${servicesStyles.imageWrapper}`}>
-                <img src={servicesArray[currentTab]?.url} alt={servicesArray[currentTab]?.title} />
-        </div>        
+            <img src={servicesArray[currentTab]?.url} alt={servicesArray[currentTab]?.title} />
+        </div>
         <div className={servicesStyles.tabContentWrapper}>
             <div>
                 <h3>{servicesArray[currentTab]?.title}</h3>
@@ -136,79 +136,79 @@ const Services = () => {
                     <div className={`${servicesStyles.button} secondaryBtn`}>Request a Quote</div>
                 </NavLink>
                 <p>{servicesArray[currentTab].description}</p>
-                { currentTab === 3 &&  <div>
-                <div className={servicesStyles.reeferVehicleTable}>
-                <h3>Subsidy for Reefer Vehicle</h3>
-                <table className={servicesStyles} cellpadding="0" cellspacing="0">
-                    <tr>
-                        <th>S.no</th>
-                        <th>National Horticulture Board Credit linked back ended subsidy</th>
-                        <th>Category/ State</th>
-                        <th>Subsidy %</th>
-                        <th>Maximum Subsidy Amount</th>
-                    </tr>
-                    <tr>
-                        <td>1.</td>
-                        <td>Reefer Vehicles Project Subsidy</td>
-                        <td className={servicesStyles.noPadding}>
-                            <div className={`${servicesStyles.borderBottomOnly}`}>General Areas</div>
-                            <div>NE Region, Hilly States</div>
-                        </td>
-                        <td className={servicesStyles.noPadding}>
-                            <div className={`${servicesStyles.borderBottomOnly}`}>35%</div>
-                            <div >50%</div>
-                        </td>
-                        <td className={servicesStyles.noPadding}>
-                            <div className={`${servicesStyles.borderBottomOnly}`}>Rs.50.75 lakh per project</div>
-                            <div>Rs. 72.50 lakh per project</div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>2.</td>
-                        <td>Interest Subvention @3% : .Maximum repayment Period: 7 years inclusive of moratorium</td>
-                        <td>All Region</td>
-                        <td>3%</td>
-                        <td>Rs 2.00 crore per project</td>
-                    </tr>
-                </table>
+                {currentTab === 3 && <div>
+                    <div className={servicesStyles.reeferVehicleTable}>
+                        <h3>Subsidy for Reefer Vehicle</h3>
+                        <table className={servicesStyles} cellpadding="0" cellspacing="0">
+                            <tr>
+                                <th>S.no</th>
+                                <th>National Horticulture Board Credit linked back ended subsidy</th>
+                                <th>Category/ State</th>
+                                <th>Subsidy %</th>
+                                <th>Maximum Subsidy Amount</th>
+                            </tr>
+                            <tr>
+                                <td>1.</td>
+                                <td>Reefer Vehicles Project Subsidy</td>
+                                <td className={servicesStyles.noPadding}>
+                                    <div className={`${servicesStyles.borderBottomOnly}`}>General Areas</div>
+                                    <div>NE Region, Hilly States</div>
+                                </td>
+                                <td className={servicesStyles.noPadding}>
+                                    <div className={`${servicesStyles.borderBottomOnly}`}>35%</div>
+                                    <div >50%</div>
+                                </td>
+                                <td className={servicesStyles.noPadding}>
+                                    <div className={`${servicesStyles.borderBottomOnly}`}>Rs.80.00 lakh per project</div>
+                                    <div>Rs. 1.00 crore project</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2.</td>
+                                <td>Interest Subvention @3% : .Maximum repayment Period: 7 years inclusive of moratorium</td>
+                                <td>All Region</td>
+                                <td>3%</td>
+                                <td>Rs 2.00 crore per project</td>
+                            </tr>
+                        </table>
 
-                <table className={servicesStyles} cellpadding="0" cellspacing="0">
-                    <tr>
-                        <th>S.no</th>
-                        <th>Government of Uttar Pradesh and Ministry of Food Processing Industries Government of India</th>
-                        <th>Category/ State</th>
-                        <th>Subsidy %</th>
-                        <th>Maximum Subsidy Amount</th>
-                    </tr>
-                    <tr>
-                        <td>1.</td>
-                        <td>Capital Subsidy for Integrated Post Harvest Management Projects of Cold chain and Refrigerated Vehicles @35 % to 50 %</td>
-                        <td>Uttar Pradesh</td>
-                        <td style={{whiteSpace:'nowrap'}}>35 % to 50 %</td>
-                        <td> Rs 10.00 crore per project</td>
-                    </tr>
-                    <tr>
-                        <td>2.</td>
-                        <td>Interest Subvention Subsidy @100% of actual Interest: Maximum repayment Period up to 5 years inclusive of Moratorium Period. </td>
-                        <td>Uttar Pradesh</td>
-                        <td>100%</td>
-                        <td>Rs 50.00 Lakhs per project</td>
-                    </tr>
-                </table>
-                </div>
-                
+                        <table className={servicesStyles} cellpadding="0" cellspacing="0">
+                            <tr>
+                                <th>S.no</th>
+                                <th>Government of Uttar Pradesh and Ministry of Food Processing Industries Government of India</th>
+                                <th>Category/ State</th>
+                                <th>Subsidy %</th>
+                                <th>Maximum Subsidy Amount</th>
+                            </tr>
+                            <tr>
+                                <td>1.</td>
+                                <td>Capital Subsidy for Integrated Post Harvest Management Projects of Cold chain and Refrigerated Vehicles @35 % to 50 %</td>
+                                <td>Uttar Pradesh</td>
+                                <td style={{ whiteSpace: 'nowrap' }}>35 % to 50 %</td>
+                                <td> Rs 10.00 crore per project</td>
+                            </tr>
+                            <tr>
+                                <td>2.</td>
+                                <td>Interest Subvention Subsidy @100% of actual Interest: Maximum repayment Period up to 5 years inclusive of Moratorium Period. </td>
+                                <td>Uttar Pradesh</td>
+                                <td>100%</td>
+                                <td>Rs 50.00 Lakhs per project</td>
+                            </tr>
+                        </table>
+                    </div>
+
                 </div>}
                 <div>
                     {servicesArray[currentTab].partners.disable === false && <h3>Our Partners</h3>}
                     {
-                    servicesArray[currentTab].partners.disable === false && 
-                        servicesArray[currentTab].partners.icons.map((icon, index)=> (
-                            <img src={icon} alt='icons' style={{height: '75px', width: 'auto', marginRight: '25px', marginTop: '15px'}}/>
+                        servicesArray[currentTab].partners.disable === false &&
+                        servicesArray[currentTab].partners.icons.map((icon, index) => (
+                            <img src={icon} alt='icons' style={{ height: '75px', width: 'auto', marginRight: '25px', marginTop: '15px' }} />
                         ))
                     }
                 </div>
             </div>
-            
+
         </div>
     </div>
 }

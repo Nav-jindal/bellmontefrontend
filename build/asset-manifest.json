@@ -1,10 +1,11 @@
 {
   "files": {
-    "main.css": "/static/css/main.c057749a.css",
-    "main.js": "/static/js/main.237fce69.js",
+    "main.css": "/static/css/main.7eeac69e.css",
+    "main.js": "/static/js/main.35f1dd46.js",
     "static/js/787.66a566a6.chunk.js": "/static/js/787.66a566a6.chunk.js",
     "static/media/gallery-4.jpg": "/static/media/gallery-4.9f031b2052245562323b.jpg",
     "static/media/truck.png": "/static/media/truck.b142c12e374662f6bac6.png",
+    "static/media/logo.svg": "/static/media/logo.3d919157fba0c2e312964743009273dc.svg",
     "static/media/gallery-2.jpg": "/static/media/gallery-2.96796dc50e3a2955ae3b.jpg",
     "static/media/gallery-8.jpg": "/static/media/gallery-8.556a303260a74a54a112.jpg",
     "static/media/gallery-7.jpg": "/static/media/gallery-7.f202d32cd200a43169a5.jpg",
@@ -17,7 +18,7 @@
     "static/media/truck_subsidy.jpg": "/static/media/truck_subsidy.2ad51de677d49b3a02ed.jpg",
     "static/media/truck_chasis.jpg": "/static/media/truck_chasis.94d32519af34beb13ed6.jpg",
     "static/media/background.png": "/static/media/background.bb9dcc5894294feb02ff.png",
-    "static/media/kryoLauri.svg": "/static/media/kryoLauri.6290235bd8ec9511d5c61188dd42f4f5.svg",
+    "static/media/kryoLauri.svg": "/static/media/kryoLauri.2c8d035c41668a1751e625ffb11dd648.svg",
     "static/media/commercialVehicle.jpg": "/static/media/commercialVehicle.a2b9323b4ab406723fc1.jpg",
     "static/media/reefer_unit.jpg": "/static/media/reefer_unit.1b3b0cb5122376e445aa.jpg",
     "static/media/carrierTransportation.svg": "/static/media/carrierTransportation.eac762ad20eebd4a43a028dea6c5ddb3.svg",
@@ -26,7 +27,6 @@
     "static/media/zep.svg": "/static/media/zep.a463fbe111bdb1785579575a91a95086.svg",
     "static/media/subzero.svg": "/static/media/subzero.b338cbdeba72059ee2d16f5f32d790d8.svg",
     "static/media/tata.svg": "/static/media/tata.cf906d65bb5085a9a92b0c8c79ba38c4.svg",
-    "static/media/logo.svg": "/static/media/logo.df8991564f86507a6f226edf65a923bd.svg",
     "static/media/Eicher.svg": "/static/media/Eicher.e9c5847b4818fd160cf843b525658b1b.svg",
     "static/media/thermoKing.svg": "/static/media/thermoKing.8371f06f20d85a474670fa7e596e97c7.svg",
     "static/media/BharatBenz.svg": "/static/media/BharatBenz.631fe231b78413107705072bbdc7f4af.svg",
@@ -40,12 +40,12 @@
     "static/media/twitter.svg": "/static/media/twitter.c1bf855a05bf3d6cf6c6544b9ae0b358.svg",
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/index.html",
-    "main.c057749a.css.map": "/static/css/main.c057749a.css.map",
-    "main.237fce69.js.map": "/static/js/main.237fce69.js.map",
+    "main.7eeac69e.css.map": "/static/css/main.7eeac69e.css.map",
+    "main.35f1dd46.js.map": "/static/js/main.35f1dd46.js.map",
     "787.66a566a6.chunk.js.map": "/static/js/787.66a566a6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c057749a.css",
-    "static/js/main.237fce69.js"
+    "static/css/main.7eeac69e.css",
+    "static/js/main.35f1dd46.js"
   ]
 }
